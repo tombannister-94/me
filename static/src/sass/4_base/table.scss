@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+    padding: 0;
+    border: {
+        spacing: 0;
+        collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: .5rem 1rem;
+        border: 1px solid $table-border;
+        background-color: $table-row;
+        text-align: left;
+    }
+
+    th {
+        font-weight: 700;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .right {
+        text-align: right;
+    }
+}

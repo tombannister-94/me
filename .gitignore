@@ -1,0 +1,8 @@
+*.py[cod]
+*.swp
+.venv
+.idea
+node_modules/
+build/
+var/
+.vscode/

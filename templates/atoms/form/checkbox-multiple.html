@@ -1,0 +1,11 @@
+{% load static_utils %}
+{% define_list 'Option 1' 'Option 2' 'Option 3' as default_options %}
+
+<div class="field {{ field_classes }}">
+    {% if label %}<label class="{{ label_classes }}">{{ label }}</label>{% endif %}
+    <ul>
+        {% for field in fields|default:default_options %}
+            <li><label><input type="checkbox"{% if disabled %} disabled{% endif %} /><span>{{ field }}</span></label></li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,28 @@
+{
+    "license": "UNLICENSED",
+    "dependencies": {
+        "@babel/core": "~7",
+        "@babel/preset-env": "~7",
+        "babelify": "~10",
+        "browserify": "~17",
+        "eslint": "~7",
+        "node-sass": "~6",
+        "normalize.css": "~8",
+        "npm-run-all": "~4",
+        "sass-lint": "~1",
+        "uglify-js": "~3",
+        "watch": "~1"
+    },
+    "scripts": {
+        "build": "yarn run build:js && yarn run build:css",
+        "prebuild": "mkdir -p dist",
+        "prebuild:js": "eslint src/js/** && mkdir -p dist/js",
+        "build:js": "browserify --entry src/js/main.js --outfile dist/js/main.js --transform [ babelify --presets [ @babel/preset-env ] --ignore [ vendor ] ] && yarn run minify:js && echo 'JS built successfully'",
+        "minify:js": "uglifyjs -c -o dist/js/main.min.js dist/js/main.js",
+        "prebuild:css": "sass-lint 'src/sass/**' --verbose --no-exit && mkdir -p dist/css",
+        "build:css": "node-sass src/sass/main.scss dist/css/main.css --output dist/css --output-style compressed --source-map true && echo 'CSS built successfully'",
+        "build:watch": "run-p 'build:watch:js' 'build:watch:css'",
+        "build:watch:js": "watch --interval 0.01 --wait 0.5 'yarn run build:js' src/js/",
+        "build:watch:css": "watch --interval 0.01 --wait 0.5 'yarn run build:css' src/sass/"
+    }
+}

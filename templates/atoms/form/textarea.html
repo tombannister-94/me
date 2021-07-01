@@ -1,0 +1,9 @@
+<div class="field{% if error %} error{% endif %} {{ field_classes }}">
+    {% if label %}<label class="{{ label_classes }}">{{ label }}</label>{% endif %}
+    <textarea{% if placeholder %} placeholder="{{ placeholder }}"{% endif %} class="{{ input_classes }}" {{ extra_attrs|safe }}{% if disabled %} disabled{% endif %}></textarea>
+    {% if error %}
+        <ul class="errorlist">
+            <li>{{ error }}</li>
+        </ul>
+    {% endif %}
+</div>

@@ -1,0 +1,21 @@
+// Base styles for generic elements
+
+html {
+    background-color: $white;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
+}
+
+hr {
+    height: 1px;
+    margin: 0 0 1rem;
+    padding: 0;
+    border: 0;
+    background-color: $grey;
+}

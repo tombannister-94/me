@@ -1,0 +1,54 @@
+// Base styles for typography elements
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    color: $text;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: inherit;
+}
+
+p,
+ol,
+ul {
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+        padding-top: 1rem;
+    }
+}

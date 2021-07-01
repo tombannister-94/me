@@ -1,0 +1,5 @@
+<!-- can use the widget_type template tag from the link below to generate the 'checkboxinput' for the class name -->
+<!-- https://github.com/jazzband/django-widget-tweaks/blob/master/widget_tweaks/templatetags/widget_tweaks.py#L113 -->
+<div class="field field--checkboxinput {{ field_classes }}">
+    <label><input type="checkbox"{% if disabled %} disabled{% endif %} /><span>{{ label|default:'Option text'|safe }}</span></label>
+</div>

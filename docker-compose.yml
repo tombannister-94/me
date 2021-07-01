@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  server: &base
+    build:
+      context: .
+      target: "base"
+    command: make serve
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    tty: true
+
+  build:
+    <<: *base
+    ports: []
+    command: make build
+    tty: true
+
+  watch:
+    <<: *base
+    ports: []
+    command: make watch
+    tty: true
+
+  static:
+    <<: *base
+    ports: []
+    command: make static-html
+    tty: true

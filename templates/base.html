@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}static-frontend-base Templates{% endblock %}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% include '_site-meta.html' %}
+
+        <link rel="stylesheet" href="{% static 'dist/css/main.css' %}"/>
+
+        {% block extra_head %}{% endblock %}
+    </head>
+
+    <body class="no-js">
+        {% block header %}{% include 'components/header.html' %}{% endblock %}
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        {% block footer %}{% include 'components/footer.html' %}{% endblock %}
+
+        <script src="{% static 'dist/js/main.js' %}"></script>
+    </body>
+</html>

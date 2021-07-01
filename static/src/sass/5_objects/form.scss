@@ -1,0 +1,53 @@
+.field {
+    @include clearfix;
+    padding-bottom: 1rem;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    & > ul {
+        @include unstyled-list;
+
+        label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+    }
+
+    &.field--checkboxinput {
+        label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+    }
+}
+
+.file-input {
+    position: relative;
+    padding: 0;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: none;
+        height: 100%;
+        padding: 0;
+        visibility: hidden;
+    }
+
+    label {
+        display: block;
+        padding: .5rem 1rem;
+        color: $white;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+.errorlist {
+    @include unstyled-list;
+    padding: .5rem 0;
+    color: $error;
+}

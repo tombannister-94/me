@@ -1,0 +1,16 @@
+{% load static_utils %}
+{% define_list 'Option 1' 'Option 2' 'Option 3' as default_options %}
+
+<div class="field{% if error %} error{% endif %} {{ field_classes }}">
+    {% if label %}<label class="{{ label_classes }}">{{ label }}</label>{% endif %}
+    <select class="{{ input_classes }}" {{ extra_attrs|safe }}{% if disabled %} disabled{% endif %}>
+        {% for option in options|default:default_options %}
+            <option>{{ option }}</option>
+        {% endfor %}
+    </select>
+    {% if error %}
+        <ul class="errorlist">
+            <li>{{ error }}</li>
+        </ul>
+    {% endif %}
+</div>

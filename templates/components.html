@@ -1,0 +1,36 @@
+{% extends 'no-ui.html' %}
+
+{% block title %}Components{% endblock %}
+
+{% block extra_head %}
+    <style>
+        body {
+            padding: 2rem 0;
+        }
+
+        h2.category-title {
+            margin: 40px 0;
+            padding: 5px 10px;
+            background: #eee;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {# Use Django includes to pull in components from files #}
+    {# {% include 'components/[component].html' %} #}
+
+    <section class="wrapper" style="padding-bottom: 2rem;">
+        <a href="index.html">Back to index</a>
+    </section>
+
+    <section class="wrapper">
+        <h1>Components</h1>
+
+        <h2 class="category-title">Header</h2>
+        {% include 'components/header.html' %}
+
+        <h2 class="category-title">Footer</h2>
+        {% include 'components/footer.html' %}
+    </section>
+{% endblock %}

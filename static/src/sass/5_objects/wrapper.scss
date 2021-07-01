@@ -1,0 +1,15 @@
+.wrapper {
+    @include clearfix;
+    position: relative;
+    max-width: $wrapper-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: content-box;
+
+    & > .wrapper {
+        padding: {
+            right: 0;
+            left: 0;
+        }
+    }
+}

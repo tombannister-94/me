@@ -1,0 +1,21 @@
+.btn {
+    @include user-select;
+    display: inline-block;
+    position: relative;
+    padding: .5rem 1rem;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    border: 0;
+    background-color: $primary;
+    color: $white;
+    cursor: pointer;
+    vertical-align: middle;
+    text: {
+        align: center;
+        decoration: none;
+    }
+    -webkit-transition: background-color .2s ease-in-out;
+
+    &:hover {
+        background-color: darken($primary, 5%);
+    }
+}
