@@ -1,6 +1,6 @@
-# static-frontend-base #
+# ME #
 
-This is a base repository to get started building static frontend templates (Django).
+Portfolio/bio static site for [myself](https://github.com/tombannister-94/) built using my [static-frontend-base](https://github.com/tombannister-94/static-frontend-base/) repo.
 
 ## Setup ##
 
