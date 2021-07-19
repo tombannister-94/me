@@ -22,7 +22,7 @@ After building the docker containers (`docker-compose build`) you will have acce
 
 ## Including javascript packages ##
 
-In order to install a JS dependency, run `yarn add [package-name]` from within the `static/` directory.
+In order to install a JS dependency, run `yarn add [package-name]` from within the `static/` directory inside the server container (`docker-compose exec web bash`).
 
 To include a dependency in a JS file you can use either ES6 module syntax or Common JS require, for example:
 
