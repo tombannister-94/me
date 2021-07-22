@@ -7,6 +7,7 @@
     &.scrolled {
         .site-header__image {
             top: -1.75rem;
+            left: -1.75rem;
             transform: scale(.5);
         }
     }
@@ -23,9 +24,15 @@
     @include flex(0, 0, 11.25rem);
     position: absolute;
     top: 25%;
-    left: 0;
+    left: 1rem;
     max-width: 11.25rem;
-    transition: transform .2s ease, top .2s ease;
+    transition: transform .2s ease, top .2s ease, left .2s ease;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        top: -1.75rem;
+        left: -1.75rem;
+        transform: scale(.5);
+    }
 
     img {
         width: 100%;

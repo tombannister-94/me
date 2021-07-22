@@ -1,3 +1,46 @@
-<footer class="site-footer">
+{% load static %}
 
+<footer class="site-footer">
+    <div class="wrapper">
+        <div class="site-footer__container">
+            <div class="site-footer__links">
+                <ul>
+                    <li><a href="#" title="Link one">Link one</a></li>
+                    <li><a href="#" title="Link one">Link two</a></li>
+                    <li><a href="#" title="Link one">Link three</a></li>
+                    <li><a href="#" title="Link one">Link four</a></li>
+                    <li><a href="#" title="Link one">Link five</a></li>
+                    <li><a href="#" title="Link one">Link six</a></li>
+                </ul>
+            </div>
+
+            <div class="site-footer__social">
+                <ul>
+                    <li>
+                        <a href="#" title="Find me on Twitter" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/social/twitter.svg' %}" alt="Twitter logo" />Tom Bannister on Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Find me on Instagram" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/social/instagram.svg' %}" alt="Instagram logo" />Tom Bannister on Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Find me on YouTube" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/social/youtube.svg' %}" alt="YouTube logo" />Tom Bannister on YouTube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/thomas-bannister-aa815b107/" title="Find me on LinkedIn" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/social/linkedin.svg' %}" alt="LinkedIn logo" />Tom Bannister on LinkedIn</a></li>
+                    <li>
+                        <a href="mailto:tombannister94@gmail.com" title="Send me an email"><img src="{% static 'img/social/mail.svg' %}" alt="Mail icon" />Email Tom Bannister</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/tombannister-94" title="Find me on GitHub" target="_blank" rel="noopener noreferrer"><img src="{% static 'img/social/github.svg' %}" alt="GitHub logo" />Tom Bannister on GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer__legal">
+        <div class="wrapper">
+            <p>Designed and built by Tom Bannister. Free icons sourced from <a href="https://www.iconfinder.com/" title="Icon Finder" target="_blank" rel="noopener noreferrer">iconfinder.com</a>.</p>
+        </div>
+    </div>
 </footer>

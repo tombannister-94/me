@@ -4,6 +4,17 @@ html {
     background-color: $white;
 }
 
+main {
+    padding-top: 5.375rem;
+}
+
+body {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    min-height: 100vh;
+}
+
 img {
     max-width: 100%;
 }
