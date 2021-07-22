@@ -1,20 +1,28 @@
-{% extends 'no-ui.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tom Bannister</title>
 
-{% block extra_head %}
-    <style>
-        body {
-            padding: 2rem 0;
-        }
-    </style>
-{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block body %}
-    <div class="wrapper">
-        <h1>Templates</h1>
+        {% include '_site-meta.html' %}
 
-        <ul>
-            <li><a href="atoms.html">Atoms</a></li>
-            <li><a href="components.html">Components</a></li>
-        </ul>
-    </div>
-{% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'dist/css/main.css' %}"/>
+
+        {% block extra_head %}{% endblock %}
+    </head>
+
+    <body>
+        <section class="page">
+            <div class="page__container">
+                <h1>My website is currently being redesigned, but will be back soon</h1>
+                <p>If you want to get in touch or would like to request a copy of my CV in the mean time, email me at <a href="mailto:tombannister94@gmail.com" title="Email me">tombannister94@gmail.com</a> or check out <a href="https://github.com/tombannister-94" target="_blank" rel="noopener noreferrer" title="Tom Bannister on GitHub">my GitHub</a></p>
+            </div>
+        </section>
+    </body>
+</html>
