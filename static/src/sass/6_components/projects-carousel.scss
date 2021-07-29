@@ -1,0 +1,86 @@
+.projects-carousel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 10rem;
+    font-size: 0;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        height: 8rem;
+    }
+}
+
+.projects-carousel__slide {
+    height: 10rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        height: 8rem;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        height: 10rem;
+        padding: 0 1rem;
+        transition: background-color .2s ease;
+        background-color: $grey;
+        font-size: 0;
+        text-decoration: none;
+        overflow: hidden;
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            height: 8rem;
+        }
+
+        &:hover {
+            background-color: darken($grey, 5%);
+
+            span {
+                bottom: .25rem;
+            }
+        }
+
+        p {
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            line-height: 1.25;
+            text-align: center;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                font-size: 1rem;
+            }
+        }
+
+        span {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            transition: bottom .2s ease;
+            font-size: 1rem;
+            text-align: center;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                font-size: .75rem;
+            }
+        }
+    }
+}
+
+.slick-slide {
+    &:nth-child(even) {
+        a {
+            background-color: darken($grey, 3%);
+
+            &:hover {
+                background-color: darken($grey, 7%);
+            }
+        }
+    }
+}
